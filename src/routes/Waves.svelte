@@ -1,26 +1,27 @@
 <script>
-	import Boat from './Boat.svelte';
+	import Boat from "./Boat.svelte";
+	import { base } from "$app/paths";
 
 	export let wind;
 
 	function calcIntensity(wind) {
-		let intensity = { speed: '40s', intense: '50%' };
+		let intensity = { speed: "40s", intense: "50%" };
 
 		if (wind < 3) {
-			intensity.intense = '50%';
-			intensity.speed = '60s';
+			intensity.intense = "50%";
+			intensity.speed = "60s";
 		} else if (wind < 8) {
-			intensity.intense = '40%';
-			intensity.speed = '20s';
+			intensity.intense = "40%";
+			intensity.speed = "20s";
 		} else if (wind < 14) {
-			intensity.intense = '30%';
-			intensity.speed = '10s';
+			intensity.intense = "30%";
+			intensity.speed = "10s";
 		} else if (wind < 24) {
-			intensity.intense = '30%';
-			intensity.speed = '5s';
+			intensity.intense = "30%";
+			intensity.speed = "5s";
 		} else {
-			intensity.intense = '20%';
-			intensity.speed = '3s';
+			intensity.intense = "20%";
+			intensity.speed = "3s";
 		}
 
 		return intensity;

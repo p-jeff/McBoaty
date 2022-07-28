@@ -1,10 +1,11 @@
 <script>
-	import Text from './Text.svelte';
-	import JsWaves from './JsWaves.svelte';
-	import Button from './Button.svelte';
-	import Time from './Time.svelte';
-	import Boat from './Boat.svelte';
-	import Clouds from './Clouds.svelte';
+	import Text from "./Text.svelte";
+	import JsWaves from "./JsWaves.svelte";
+	import Button from "./Button.svelte";
+	import Time from "./Time.svelte";
+	import Boat from "./Boat.svelte";
+	import Clouds from "./Clouds.svelte";
+	import { base } from "$app/paths";
 
 	let working = false;
 	let rain = false;
@@ -25,7 +26,7 @@
 			weather: props.weather[0].description,
 			clouds: props.clouds.all,
 			temp: props.main.temp,
-			wind: props.wind.speed
+			wind: props.wind.speed,
 		};
 
 		working = true;
@@ -37,7 +38,7 @@
 		);
 
 		const data = await response.json();
-		console.log('response: ', data);
+		console.log("response: ", data);
 
 		if (response.ok) {
 			disect(data);
@@ -50,7 +51,7 @@
 
 	async function getLocation() {
 		if (!navigator.geolocation) {
-			alert('Geolocation is not supported by your browser');
+			alert("Geolocation is not supported by your browser");
 		} else {
 			navigator.geolocation.getCurrentPosition(success, error);
 		}
@@ -62,7 +63,7 @@
 		}
 
 		function error() {
-			alert('Unable to retrieve your location');
+			alert("Unable to retrieve your location");
 		}
 	}
 
@@ -70,13 +71,16 @@
 		getLocation();
 	}
 
-	const API_KEY = '48a68e3cc741ec9730c4fae0dea41bc5';
+	const API_KEY = "48a68e3cc741ec9730c4fae0dea41bc5";
 
 	//https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=48a68e3cc741ec9730c4fae0dea41bc5
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Raleway"
+	/>
 </svelte:head>
 
 {#if working}
@@ -98,7 +102,10 @@
 		<div class="clouds"><Clouds cloudPercentage={pkg.clouds} /></div>
 	</div>
 {:else}
-	<h1>Welcome, this idea requires location data. Nothing will be stored or recorded.</h1>
+	<h1>
+		Welcome, this idea requires location data. Nothing will be stored or
+		recorded.
+	</h1>
 	<Button on:click={clickHandler} tag="Enter" />
 {/if}
 

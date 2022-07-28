@@ -4,15 +4,19 @@
 	export let clouds;
 	export let temp;
 	export let wind;
+	import { base } from "$app/paths";
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Raleway"
+	/>
 </svelte:head>
 
 <p>
-	The weather is {name} is {weather} and it is {clouds}% cloudy, with {temp} degrees celsius. Current
-	Windspeed is: {wind}
+	The weather is {name} is {weather} and it is {clouds}% cloudy, with {temp} degrees
+	celsius. Current Windspeed is: {wind}
 </p>
 
 <style>

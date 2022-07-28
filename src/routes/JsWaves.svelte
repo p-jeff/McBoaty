@@ -1,32 +1,33 @@
 <script>
-	import anime from 'animejs';
-	import { onMount } from 'svelte';
-	import Boat from './Boat.svelte';
-	import Clouds from './Clouds.svelte';
+	import anime from "animejs";
+	import { onMount } from "svelte";
+	import Boat from "./Boat.svelte";
+	import Clouds from "./Clouds.svelte";
+	import { base } from "$app/paths";
 
 	export let wind;
 	let strength = 75000 / wind + 1000;
 
 	onMount((wind) => {
-		const wavePath = anime.path('.eight');
+		const wavePath = anime.path(".eight");
 
 		let waveAnimation = anime({
-			targets: '.one',
-			translateX: wavePath('x'),
-			translateY: wavePath('y'),
-			easing: 'linear',
+			targets: ".one",
+			translateX: wavePath("x"),
+			translateY: wavePath("y"),
+			easing: "linear",
 			duration: strength,
-			loop: true
+			loop: true,
 		});
 
 		let reverseWave = anime({
-			targets: '.two',
-			translateX: wavePath('x'),
-			translateY: wavePath('y'),
-			direction: 'reverse',
-			easing: 'linear',
+			targets: ".two",
+			translateX: wavePath("x"),
+			translateY: wavePath("y"),
+			direction: "reverse",
+			easing: "linear",
 			duration: strength,
-			loop: true
+			loop: true,
 		});
 	});
 </script>

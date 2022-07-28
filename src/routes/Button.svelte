@@ -1,5 +1,7 @@
 <script>
 	export let tag;
+	import { base } from '$app/paths';
+	
 </script>
 
 <svelte:head>

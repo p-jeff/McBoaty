@@ -1,6 +1,7 @@
 <script>
 	import anime from 'animejs';
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 
 	export let cloudPercentage;
 	let clouds = [];

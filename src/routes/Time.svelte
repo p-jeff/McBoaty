@@ -1,6 +1,7 @@
 <script>
-	import anime from 'animejs';
-	import { onMount } from 'svelte';
+	import anime from "animejs";
+	import { onMount } from "svelte";
+	import { base } from "$app/paths";
 
 	function getMilliseconds() {
 		let now = new Date();
@@ -9,7 +10,8 @@
 		let seconds = now.getSeconds();
 		let milliseconds = now.getMilliseconds();
 
-		let sum = hours * 3600000 + minutes * 60000 + seconds * 1000 + milliseconds;
+		let sum =
+			hours * 3600000 + minutes * 60000 + seconds * 1000 + milliseconds;
 
 		return sum;
 	}
@@ -18,7 +20,7 @@
 	let morning = true;
 	let currentTime = getMilliseconds();
 
-	console.log('currentTime: ' + currentTime);
+	console.log("currentTime: " + currentTime);
 
 	if (currentTime <= 8 * 3600000) {
 		day = false;
@@ -31,7 +33,7 @@
 	}
 
 	function animationSetup() {
-		let orbiterPath = anime.path('.sunCircle');
+		let orbiterPath = anime.path(".sunCircle");
 
 		/*let bgAnimation = anime.timeline({
 			targets: 'body',
@@ -58,13 +60,13 @@
 		bgAnimation.play(); */
 
 		let orbiterAnimation = anime({
-			targets: '.orbiter',
-			translateX: orbiterPath('x'),
-			translateY: orbiterPath('y'),
-			easing: 'linear',
+			targets: ".orbiter",
+			translateX: orbiterPath("x"),
+			translateY: orbiterPath("y"),
+			easing: "linear",
 			rotateZ: 360000,
 			duration: 43200000,
-			autoplay: false
+			autoplay: false,
 		});
 
 		if (day) {
@@ -80,10 +82,10 @@
 			let t = currentTime - 72000000;
 			orbiterAnimation.seek(t);
 			orbiterAnimation.play();
-			console.log('night');
+			console.log("night");
 		} else {
 			alert(
-				'Something went Horribly Wrong - According to my calculations, it is neither day nor night'
+				"Something went Horribly Wrong - According to my calculations, it is neither day nor night"
 			);
 		}
 	}

@@ -1,32 +1,33 @@
 <script>
-	import anime from 'animejs';
-	import { onMount } from 'svelte';
+	import anime from "animejs";
+	import { onMount } from "svelte";
+	import { base } from "$app/paths";
 
 	export let wind;
 	let strength = 75000 / wind + 1000;
 
 	onMount(() => {
-		const boatPath = anime.path('.arch');
+		const boatPath = anime.path(".arch");
 
 		let boatAnimation = anime({
-			targets: '.boat',
-			translateX: boatPath('x'),
-			translateY: boatPath('y'),
-			rotate: boatPath('angle'),
-			direction: 'alternate',
-			easing: 'linear',
+			targets: ".boat",
+			translateX: boatPath("x"),
+			translateY: boatPath("y"),
+			rotate: boatPath("angle"),
+			direction: "alternate",
+			easing: "linear",
 			duration: strength,
-			loop: true
+			loop: true,
 		});
 
 		let armAnimation = anime({
-			targets: '.arm',
+			targets: ".arm",
 			rotateX: 40,
 			rotateZ: 30,
-			direction: 'alternate',
+			direction: "alternate",
 			duration: 5000,
-			easing: 'linear',
-			loop: true
+			easing: "linear",
+			loop: true,
 		});
 	});
 </script>
