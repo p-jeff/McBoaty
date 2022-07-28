@@ -6,7 +6,10 @@ const config = {
 	kit: {
 		adapter: static_adapter(),
 		prerender: { default: true }
-	}
+	},
+	paths: {
+		base: '/McBoaty',
+	},
 };
 
 export default config;
