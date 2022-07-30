@@ -5,7 +5,6 @@
 	import Time from "./Time.svelte";
 	import Boat from "./Boat.svelte";
 	import Clouds from "./Clouds.svelte";
-	import { base } from "$app/paths";
 
 	let working = false;
 	let rain = false;

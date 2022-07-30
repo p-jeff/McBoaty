@@ -1,7 +1,6 @@
 <script>
 	import anime from "animejs";
 	import { onMount } from "svelte";
-	import { base } from "$app/paths";
 
 	export let wind;
 	let strength = 75000 / wind + 1000;

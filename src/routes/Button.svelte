@@ -1,11 +1,12 @@
 <script>
 	export let tag;
-	import { base } from '$app/paths';
-	
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Raleway"
+	/>
 </svelte:head>
 
 <button on:click> {tag} </button>

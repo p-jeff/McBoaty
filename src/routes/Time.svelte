@@ -1,7 +1,6 @@
 <script>
 	import anime from "animejs";
 	import { onMount } from "svelte";
-	import { base } from "$app/paths";
 
 	function getMilliseconds() {
 		let now = new Date();

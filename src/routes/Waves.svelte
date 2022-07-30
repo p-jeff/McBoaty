@@ -1,6 +1,5 @@
 <script>
 	import Boat from "./Boat.svelte";
-	import { base } from "$app/paths";
 
 	export let wind;
 

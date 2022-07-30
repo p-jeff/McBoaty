@@ -1,7 +1,6 @@
 <script>
-	import anime from 'animejs';
-	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
+	import anime from "animejs";
+	import { onMount } from "svelte";
 
 	export let cloudPercentage;
 	let clouds = [];
@@ -14,23 +13,23 @@
 	}
 
 	onMount(() => {
-		const cloudPath = anime.path('.cloudy');
+		const cloudPath = anime.path(".cloudy");
 
 		for (let i = 1; i <= clouds.length; i++) {
 			let cloudAnimation = anime({
 				targets: `.c${i}`,
-				translateX: cloudPath('x'),
-				translateY: cloudPath('y'),
+				translateX: cloudPath("x"),
+				translateY: cloudPath("y"),
 				scale: Math.random() + 0.4,
-				easing: 'linear',
+				easing: "linear",
 				duration: 200000,
 				delay: i * Math.floor(Math.random() * 100),
-				direction: 'alternate',
+				direction: "alternate",
 				loop: true,
-				autoplay: false
+				autoplay: false,
 			});
 			let p = Math.floor(Math.random() * 10000) * 20;
-			console.log('p:' + p);
+			console.log("p:" + p);
 			cloudAnimation.seek(p);
 			cloudAnimation.play();
 		}
@@ -42,7 +41,10 @@
 {/each}
 
 <svg>
-	<path d="m -97 0 q 15 -138 40 0 t 40 0 t 35 0 t 35 0 t 35 0" class="cloudy" />
+	<path
+		d="m -97 0 q 15 -138 40 0 t 40 0 t 35 0 t 35 0 t 35 0"
+		class="cloudy"
+	/>
 </svg>
 
 <style>

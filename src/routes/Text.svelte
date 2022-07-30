@@ -4,7 +4,6 @@
 	export let clouds;
 	export let temp;
 	export let wind;
-	import { base } from "$app/paths";
 </script>
 
 <svelte:head>

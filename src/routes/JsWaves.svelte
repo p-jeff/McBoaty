@@ -3,7 +3,6 @@
 	import { onMount } from "svelte";
 	import Boat from "./Boat.svelte";
 	import Clouds from "./Clouds.svelte";
-	import { base } from "$app/paths";
 
 	export let wind;
 	let strength = 75000 / wind + 1000;
