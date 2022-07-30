@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-7c5a7d43.js",
+    "file": "_app/immutable/start-fbc27ebc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -197,6 +197,10 @@
   "_anime.es-aa8433bd.js": {
     "file": "_app/immutable/chunks/anime.es-aa8433bd.js"
   },
+  "src/routes/JsWaves.css": {
+    "file": "_app/immutable/assets/JsWaves-5f3e5e38.css",
+    "src": "src/routes/JsWaves.css"
+  },
   "Boat.css": {
     "file": "_app/immutable/assets/Boat-f5622971.css",
     "src": "Boat.css"
@@ -209,17 +213,13 @@
     "file": "_app/immutable/assets/Clouds-85dfb397.css",
     "src": "Clouds.css"
   },
-  "src/routes/JsWaves.css": {
-    "file": "_app/immutable/assets/JsWaves-5f3e5e38.css",
-    "src": "src/routes/JsWaves.css"
+  "src/routes/Time.css": {
+    "file": "_app/immutable/assets/Time-e3ddeed2.css",
+    "src": "src/routes/Time.css"
   },
   "src/routes/JsWaves_old.css": {
     "file": "_app/immutable/assets/JsWaves_old-96d85223.css",
     "src": "src/routes/JsWaves_old.css"
-  },
-  "src/routes/Time.css": {
-    "file": "_app/immutable/assets/Time-e3ddeed2.css",
-    "src": "src/routes/Time.css"
   },
   "src/routes/Text.css": {
     "file": "_app/immutable/assets/Text-cd244318.css",
