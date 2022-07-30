@@ -32,13 +32,14 @@
 		morning = false;
 	}
 
+	/* Uable to be prerendered (Probable fix with stopped Anime animation & timekeys)
 	if (day && downfall) {
 		document.body.style.backgroundColor = "#69788a";
 	} else if (day) {
 		document.body.style.backgroundColor = "#c7dfff";
 	} else if (!day) {
 		document.body.style.backgroundColor = "#32324f";
-	}
+	}*/
 
 	function animationSetup() {
 		let orbiterPath = anime.path(".sunCircle");
