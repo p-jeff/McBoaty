@@ -32,7 +32,6 @@
 		morning = false;
 	}
 
-	/* Background Colouring unable to be prerendered -> fix is probably in a set animation. (That worked preciously)
 	if (day && downfall) {
 		document.body.style.backgroundColor = "#69788a";
 	} else if (day) {
@@ -40,7 +39,7 @@
 	} else if (!day) {
 		document.body.style.backgroundColor = "#32324f";
 	}
-*/
+
 	function animationSetup() {
 		let orbiterPath = anime.path(".sunCircle");
 
