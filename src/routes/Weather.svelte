@@ -133,6 +133,8 @@
 		{#if downfall}
 			<div class="rain"><Rain {snow} strength={pkg.rain} /></div>
 		{/if}
+
+		<img src="compass.svg" alt="Compass" class="compass" />
 	</div>
 {:else}
 	<h1>
@@ -168,6 +170,14 @@
 	.rain {
 		grid-area: 1/2;
 		z-index: 4;
+	}
+	.compass {
+		grid-area: 1/2;
+		z-index: 5;
+		max-width: 15%;
+		position: absolute;
+		right: 2%;
+		bottom: 2%;
 	}
 
 	.boat {
