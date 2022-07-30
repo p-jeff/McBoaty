@@ -2,6 +2,8 @@
 	import anime from "animejs";
 	import { onMount } from "svelte";
 
+	export let downfall;
+
 	function getMilliseconds() {
 		let now = new Date();
 		let hours = now.getHours();
@@ -11,7 +13,6 @@
 
 		let sum =
 			hours * 3600000 + minutes * 60000 + seconds * 1000 + milliseconds;
-
 		return sum;
 	}
 
@@ -31,32 +32,16 @@
 		morning = false;
 	}
 
+	if (day && downfall) {
+		document.body.style.backgroundColor = "#69788a";
+	} else if (day) {
+		document.body.style.backgroundColor = "#c7dfff";
+	} else if (!day) {
+		document.body.style.backgroundColor = "#32324f";
+	}
+
 	function animationSetup() {
 		let orbiterPath = anime.path(".sunCircle");
-
-		/*let bgAnimation = anime.timeline({
-			targets: 'body',
-			duration: 43200000 / 4,
-			loop: true,
-			autoplay: false,
-			easing: 'linear'
-		});
-
-		bgAnimation.add({
-			backgroundColor: '#DFF3E3'
-		});
-		bgAnimation.add({
-			backgroundColor: '#B0DEFF'
-		});
-		bgAnimation.add({
-			backgroundColor: '#F69E7B'
-		});
-		bgAnimation.add({
-			backgroundColor: '#383E56'
-		}); 
-
-		bgAnimation.seek(currentTime);
-		bgAnimation.play(); */
 
 		let orbiterAnimation = anime({
 			targets: ".orbiter",
