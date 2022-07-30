@@ -2,7 +2,7 @@
 	import anime from "animejs";
 	import { onMount } from "svelte";
 
-	export let downfall;
+	//export let downfall;
 
 	function getMilliseconds() {
 		let now = new Date();
