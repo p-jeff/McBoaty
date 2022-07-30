@@ -4,12 +4,15 @@ import static_adapter from '@sveltejs/adapter-static';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: static_adapter(),
+		adapter: static_adapter({
+			paths: {
+				base: '/McBoaty',
+				assets: '/McBoaty'
+			}
+		}),
 		prerender: { default: true }
-	},
-	paths: {
-		base: '/McBoaty',
-	},
+
+	}
 };
 
 export default config;
