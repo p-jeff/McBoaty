@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-1a6b9f51.js",
+    "file": "_app/immutable/start-febc7cf8.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -197,44 +197,44 @@
   "_anime.es-aa8433bd.js": {
     "file": "_app/immutable/chunks/anime.es-aa8433bd.js"
   },
-  "src/routes/JsWaves_old.css": {
-    "file": "_app/immutable/assets/JsWaves_old-96d85223.css",
-    "src": "src/routes/JsWaves_old.css"
-  },
   "src/routes/Button.css": {
     "file": "_app/immutable/assets/Button-9bf8ea8d.css",
     "src": "src/routes/Button.css"
   },
-  "src/routes/Text.css": {
-    "file": "_app/immutable/assets/Text-cd244318.css",
-    "src": "src/routes/Text.css"
+  "src/routes/Time.css": {
+    "file": "_app/immutable/assets/Time-e3ddeed2.css",
+    "src": "src/routes/Time.css"
   },
-  "Clouds.css": {
-    "file": "_app/immutable/assets/Clouds-85dfb397.css",
-    "src": "Clouds.css"
+  "src/routes/JsWaves_old.css": {
+    "file": "_app/immutable/assets/JsWaves_old-96d85223.css",
+    "src": "src/routes/JsWaves_old.css"
   },
   "src/routes/JsWaves.css": {
     "file": "_app/immutable/assets/JsWaves-5f3e5e38.css",
     "src": "src/routes/JsWaves.css"
   },
-  "src/routes/Weather.css": {
-    "file": "_app/immutable/assets/Weather-b1bd13fc.css",
-    "src": "src/routes/Weather.css"
-  },
-  "src/routes/Waves.css": {
-    "file": "_app/immutable/assets/Waves-8e94a91d.css",
-    "src": "src/routes/Waves.css"
-  },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-a999857b.css",
-    "src": "src/routes/index.css"
+  "Clouds.css": {
+    "file": "_app/immutable/assets/Clouds-85dfb397.css",
+    "src": "Clouds.css"
   },
   "Boat.css": {
     "file": "_app/immutable/assets/Boat-f5622971.css",
     "src": "Boat.css"
   },
-  "src/routes/Time.css": {
-    "file": "_app/immutable/assets/Time-e3ddeed2.css",
-    "src": "src/routes/Time.css"
+  "src/routes/Text.css": {
+    "file": "_app/immutable/assets/Text-cd244318.css",
+    "src": "src/routes/Text.css"
+  },
+  "src/routes/Waves.css": {
+    "file": "_app/immutable/assets/Waves-8e94a91d.css",
+    "src": "src/routes/Waves.css"
+  },
+  "src/routes/Weather.css": {
+    "file": "_app/immutable/assets/Weather-b1bd13fc.css",
+    "src": "src/routes/Weather.css"
+  },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-a999857b.css",
+    "src": "src/routes/index.css"
   }
 }
