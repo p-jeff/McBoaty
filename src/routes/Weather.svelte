@@ -5,30 +5,60 @@
 	import Time from "./Time.svelte";
 	import Boat from "./Boat.svelte";
 	import Clouds from "./Clouds.svelte";
+	import Rain from "./rain.svelte";
 
 	let working = false;
-	let rain = false;
+	let downfall = false;
 	let snow = false;
-	let mist = false;
-	let thunder = false;
 	let pkg;
 
 	function disect(props) {
-		/*if (props.weather[0].description === 'clear') {
-		} else if (props.weather[0].description === 'rain') {
-			rain = true;
-			pkg.clouds = 5;
-		} */
-
 		pkg = {
 			name: props.name,
 			weather: props.weather[0].description,
 			clouds: props.clouds.all,
 			temp: props.main.temp,
 			wind: props.wind.speed,
+			rain: 0,
 		};
 
 		working = true;
+		isDownfall(props.weather[0].id);
+	}
+
+	function isDownfall(code) {
+		if (code === 300 || code === 301 || code === 302 || code === 500) {
+			(downfall = true), (pkg.rain = 10);
+		} else if (
+			code === 310 ||
+			code === 311 ||
+			code === 312 ||
+			code === 313 ||
+			code === 314 ||
+			code === 321 ||
+			code === 501
+		) {
+			(downfall = true), (pkg.rain = 20);
+		} else if (
+			code === 502 ||
+			code === 503 ||
+			code === 520 ||
+			code === 521
+		) {
+			(downfall = true), (pkg.rain = 50);
+		} else if (code === 504 || code === 522 || code === 531) {
+			(downfall = true), (pkg.rain = 100);
+		} else if (
+			code === 601 ||
+			code === 602 ||
+			code === 603 ||
+			code === 620 ||
+			code === 621
+		) {
+			(downfall = true), (snow = true), (pkg.rain = 50);
+		} else if (code === 604 || code === 622) {
+			(downfall = true), (snow = true), (pkg.rain = 100);
+		}
 	}
 
 	async function getWeather(lat, lon) {
@@ -95,10 +125,14 @@
 		</div>
 
 		<div class="time">
-			<Time />
+			<Time {downfall} />
 		</div>
 
 		<div class="clouds"><Clouds cloudPercentage={pkg.clouds} /></div>
+
+		{#if downfall}
+			<div class="rain"><Rain {snow} strength={pkg.rain} /></div>
+		{/if}
 	</div>
 {:else}
 	<h1>
@@ -127,6 +161,11 @@
 	}
 
 	.clouds {
+		grid-area: 1/2;
+		z-index: 4;
+	}
+
+	.rain {
 		grid-area: 1/2;
 		z-index: 4;
 	}
