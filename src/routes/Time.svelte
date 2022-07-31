@@ -1,8 +1,9 @@
 <script>
 	import anime from "animejs";
 	import { onMount } from "svelte";
+	import { xlink_attr } from "svelte/internal";
 
-	//export let downfall;
+	export let downfall;
 
 	function getMilliseconds() {
 		let now = new Date();
@@ -32,17 +33,31 @@
 		morning = false;
 	}
 
-	/* Uable to be prerendered (Probable fix with stopped Anime animation & timekeys)
-	if (day && downfall) {
-		document.body.style.backgroundColor = "#69788a";
-	} else if (day) {
-		document.body.style.backgroundColor = "#c7dfff";
-	} else if (!day) {
-		document.body.style.backgroundColor = "#32324f";
-	}*/
-
 	function animationSetup() {
 		let orbiterPath = anime.path(".sunCircle");
+
+		let bgColor = anime.timeline({
+			targets: "body",
+			duration: 1,
+			autoplay: false,
+		});
+		bgColor.add({
+			backgroundColor: "#69788a",
+		});
+		bgColor.add({
+			backgroundColor: "#c7dfff",
+		});
+		bgColor.add({
+			backgroundColor: "#32324f",
+		});
+
+		if (day && downfall) {
+			bgColor.seek(1);
+		} else if (day) {
+			bgColor.seek(2);
+		} else if (!day) {
+			bgColor.seek(3);
+		}
 
 		let orbiterAnimation = anime({
 			targets: ".orbiter",
