@@ -7,10 +7,25 @@
 	import Clouds from "./Clouds.svelte";
 	import Rain from "./rain.svelte";
 
+	let selected;
+	let conditions = [
+		0, 300, 301, 302, 500, 310, 311, 312, 313, 314, 321, 501, 502, 503, 520,
+		521, 504, 522, 531, 601, 602, 603, 604, 620, 621,
+	];
+
+	let hour = 24;
 	let working = false;
 	let downfall = false;
 	let snow = false;
-	let pkg;
+	let pkg = {
+		name: "DEVELOPER",
+		weather: "DESCRIPTION",
+		clouds: 0,
+		temp: 0,
+		wind: 0,
+		rain: 0,
+	};
+	let devOptions = false;
 
 	function disect(props) {
 		pkg = {
@@ -97,7 +112,13 @@
 	}
 
 	function clickHandler() {
-		getLocation();
+		if (devOptions) {
+			isDownfall(selected);
+			console.log(pkg);
+			working = true;
+		} else {
+			getLocation();
+		}
 	}
 
 	const API_KEY = "48a68e3cc741ec9730c4fae0dea41bc5";
@@ -125,7 +146,7 @@
 		</div>
 
 		<div class="time">
-			<Time {downfall} />
+			<Time {downfall} {hour} />
 		</div>
 
 		<div class="clouds"><Clouds cloudPercentage={pkg.clouds} /></div>
@@ -142,6 +163,39 @@
 		recorded.
 	</h1>
 	<Button on:click={clickHandler} tag="Enter" />
+	<div class="devBox">
+		<label class="dev">
+			<input type="checkbox" bind:checked={devOptions} />
+			Debugging
+		</label>
+		<br />
+		{#if devOptions}
+			<label class="dev">
+				<input type="range" bind:value={pkg.wind} min="0" max="30" />
+				Windspeed: {pkg.wind}
+			</label>
+			<label class="dev">
+				<input type="range" bind:value={pkg.clouds} min="0" max="100" />
+				Clouds `%`: {pkg.clouds}
+			</label>
+			<label class="dev">
+				<input type="range" bind:value={hour} min="0" max="23" />
+				Hour: {hour}
+			</label>
+			<br />
+
+			<label class="dev">
+				<select bind:value={selected}>
+					{#each conditions as condition}
+						<option value={condition}>
+							{condition}
+						</option>
+					{/each}
+				</select>
+				Weather Code
+			</label>
+		{/if}
+	</div>
 {/if}
 
 <style>
@@ -151,6 +205,16 @@
 		margin-right: auto;
 		text-align: center;
 		margin-top: 20%;
+	}
+
+	.devBox {
+		max-width: 20%;
+		position: absolute;
+		top: 1%;
+	}
+
+	.dev {
+		font: 12px Raleway;
 	}
 
 	.time {

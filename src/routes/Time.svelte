@@ -1,9 +1,9 @@
 <script>
 	import anime from "animejs";
 	import { onMount } from "svelte";
-	import { xlink_attr } from "svelte/internal";
 
 	export let downfall;
+	export let hour;
 
 	function getMilliseconds() {
 		let now = new Date();
@@ -19,7 +19,13 @@
 
 	let day = false;
 	let morning = true;
-	let currentTime = getMilliseconds();
+	let currentTime;
+
+	if (hour < 23) {
+		currentTime = hour * 3600000;
+	} else {
+		currentTime = getMilliseconds();
+	}
 
 	console.log("currentTime: " + currentTime);
 
