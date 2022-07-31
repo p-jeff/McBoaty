@@ -122,8 +122,13 @@
 	}
 
 	const API_KEY = "48a68e3cc741ec9730c4fae0dea41bc5";
-
 	//https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=48a68e3cc741ec9730c4fae0dea41bc5
+
+	function handleKeydown(event) {
+		if (event.key === "Backspace") {
+			devOptions = !devOptions;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -132,6 +137,8 @@
 		href="https://fonts.googleapis.com/css?family=Raleway"
 	/>
 </svelte:head>
+
+<svelte:window on:keydown={handleKeydown} />
 
 {#if working}
 	<Text {...pkg} />
@@ -163,13 +170,14 @@
 		recorded.
 	</h1>
 	<Button on:click={clickHandler} tag="Enter" />
-	<div class="devBox">
-		<label class="dev">
-			<input type="checkbox" bind:checked={devOptions} />
-			Debugging
-		</label>
-		<br />
-		{#if devOptions}
+
+	{#if devOptions}
+		<div class="devBox">
+			<label class="dev">
+				<input type="checkbox" bind:checked={devOptions} />
+				Debugging
+			</label>
+			<br />
 			<label class="dev">
 				<input type="range" bind:value={pkg.wind} min="0" max="30" />
 				Windspeed: {pkg.wind}
@@ -194,8 +202,8 @@
 				</select>
 				Weather Code
 			</label>
-		{/if}
-	</div>
+		</div>
+	{/if}
 {/if}
 
 <style>
