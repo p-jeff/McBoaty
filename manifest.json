@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-a0a5ec70.js",
+    "file": "_app/immutable/start-24f045c2.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-b0ba3887.js"
+      "_index-069ed4bc.js"
     ],
     "dynamicImports": [
       ".svelte-kit/runtime/components/layout.svelte",
@@ -23,30 +23,30 @@
     ]
   },
   ".svelte-kit/runtime/components/layout.svelte": {
-    "file": "_app/immutable/layout.svelte-07741e48.js",
+    "file": "_app/immutable/layout.svelte-d50eba2d.js",
     "src": ".svelte-kit/runtime/components/layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js"
+      "_index-069ed4bc.js"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "_app/immutable/error.svelte-1c3c60cc.js",
+    "file": "_app/immutable/error.svelte-047ec63e.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js"
+      "_index-069ed4bc.js"
     ]
   },
   "src/routes/Boat.svelte": {
-    "file": "_app/immutable/pages/Boat.svelte-cdc92610.js",
+    "file": "_app/immutable/pages/Boat.svelte-e11f7ed0.js",
     "src": "src/routes/Boat.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "_anime.es-aa8433bd.js"
     ],
     "css": [
@@ -54,24 +54,24 @@
     ]
   },
   "src/routes/Button.svelte": {
-    "file": "_app/immutable/pages/Button.svelte-3ff64c80.js",
+    "file": "_app/immutable/pages/Button.svelte-31f5acae.js",
     "src": "src/routes/Button.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js"
+      "_index-069ed4bc.js"
     ],
     "css": [
       "_app/immutable/assets/Button-9bf8ea8d.css"
     ]
   },
   "src/routes/Clouds.svelte": {
-    "file": "_app/immutable/pages/Clouds.svelte-4bc0e821.js",
+    "file": "_app/immutable/pages/Clouds.svelte-63229489.js",
     "src": "src/routes/Clouds.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "_anime.es-aa8433bd.js"
     ],
     "css": [
@@ -79,12 +79,12 @@
     ]
   },
   "src/routes/JsWaves.svelte": {
-    "file": "_app/immutable/pages/JsWaves.svelte-19b60a7d.js",
+    "file": "_app/immutable/pages/JsWaves.svelte-665f351b.js",
     "src": "src/routes/JsWaves.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "_anime.es-aa8433bd.js"
     ],
     "css": [
@@ -94,24 +94,24 @@
     ]
   },
   "src/routes/Text.svelte": {
-    "file": "_app/immutable/pages/Text.svelte-aae4716b.js",
+    "file": "_app/immutable/pages/Text.svelte-13d87a79.js",
     "src": "src/routes/Text.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js"
+      "_index-069ed4bc.js"
     ],
     "css": [
       "_app/immutable/assets/Text-cd244318.css"
     ]
   },
   "src/routes/Time.svelte": {
-    "file": "_app/immutable/pages/Time.svelte-252e1dc8.js",
+    "file": "_app/immutable/pages/Time.svelte-b08edb84.js",
     "src": "src/routes/Time.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "_anime.es-aa8433bd.js"
     ],
     "css": [
@@ -119,12 +119,12 @@
     ]
   },
   "src/routes/Waves.svelte": {
-    "file": "_app/immutable/pages/Waves.svelte-933666d4.js",
+    "file": "_app/immutable/pages/Waves.svelte-efb07849.js",
     "src": "src/routes/Waves.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "src/routes/Boat.svelte",
       "_anime.es-aa8433bd.js"
     ],
@@ -134,12 +134,12 @@
     ]
   },
   "src/routes/Weather.svelte": {
-    "file": "_app/immutable/pages/Weather.svelte-b2649406.js",
+    "file": "_app/immutable/pages/Weather.svelte-b5117105.js",
     "src": "src/routes/Weather.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "src/routes/Text.svelte",
       "src/routes/JsWaves.svelte",
       "src/routes/Button.svelte",
@@ -150,30 +150,30 @@
       "_anime.es-aa8433bd.js"
     ],
     "css": [
-      "_app/immutable/assets/Weather-3ab20b4d.css",
+      "_app/immutable/assets/Weather-958286ad.css",
       "_app/immutable/assets/Boat-f5622971.css",
       "_app/immutable/assets/Clouds-85dfb397.css"
     ]
   },
   "src/routes/rain.svelte": {
-    "file": "_app/immutable/pages/rain.svelte-2511dba0.js",
+    "file": "_app/immutable/pages/rain.svelte-16a75976.js",
     "src": "src/routes/rain.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js"
+      "_index-069ed4bc.js"
     ],
     "css": [
       "_app/immutable/assets/rain-d0b14a3d.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-dc1caece.js",
+    "file": "_app/immutable/pages/index.svelte-8ef3df94.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "src/routes/Weather.svelte",
       "src/routes/Text.svelte",
       "src/routes/JsWaves.svelte",
@@ -191,55 +191,39 @@
     ]
   },
   "src/routes/rain copy.svelte": {
-    "file": "_app/immutable/pages/rain copy.svelte-f398eb7d.js",
+    "file": "_app/immutable/pages/rain copy.svelte-d126cadc.js",
     "src": "src/routes/rain copy.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b0ba3887.js",
+      "_index-069ed4bc.js",
       "_anime.es-aa8433bd.js"
     ],
     "css": [
       "_app/immutable/assets/rain copy-1433723e.css"
     ]
   },
-  "_index-b0ba3887.js": {
-    "file": "_app/immutable/chunks/index-b0ba3887.js"
+  "_index-069ed4bc.js": {
+    "file": "_app/immutable/chunks/index-069ed4bc.js"
   },
   "_anime.es-aa8433bd.js": {
     "file": "_app/immutable/chunks/anime.es-aa8433bd.js"
-  },
-  "Boat.css": {
-    "file": "_app/immutable/assets/Boat-f5622971.css",
-    "src": "Boat.css"
-  },
-  "src/routes/rain copy.css": {
-    "file": "_app/immutable/assets/rain copy-1433723e.css",
-    "src": "src/routes/rain copy.css"
-  },
-  "src/routes/Text.css": {
-    "file": "_app/immutable/assets/Text-cd244318.css",
-    "src": "src/routes/Text.css"
-  },
-  "src/routes/Time.css": {
-    "file": "_app/immutable/assets/Time-e3ddeed2.css",
-    "src": "src/routes/Time.css"
-  },
-  "src/routes/Weather.css": {
-    "file": "_app/immutable/assets/Weather-3ab20b4d.css",
-    "src": "src/routes/Weather.css"
   },
   "Clouds.css": {
     "file": "_app/immutable/assets/Clouds-85dfb397.css",
     "src": "Clouds.css"
   },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-d18c756b.css",
+    "src": "src/routes/index.css"
+  },
   "src/routes/Button.css": {
     "file": "_app/immutable/assets/Button-9bf8ea8d.css",
     "src": "src/routes/Button.css"
   },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-d18c756b.css",
-    "src": "src/routes/index.css"
+  "src/routes/rain copy.css": {
+    "file": "_app/immutable/assets/rain copy-1433723e.css",
+    "src": "src/routes/rain copy.css"
   },
   "src/routes/JsWaves.css": {
     "file": "_app/immutable/assets/JsWaves-5f3e5e38.css",
@@ -248,6 +232,22 @@
   "src/routes/Waves.css": {
     "file": "_app/immutable/assets/Waves-8e94a91d.css",
     "src": "src/routes/Waves.css"
+  },
+  "src/routes/Text.css": {
+    "file": "_app/immutable/assets/Text-cd244318.css",
+    "src": "src/routes/Text.css"
+  },
+  "Boat.css": {
+    "file": "_app/immutable/assets/Boat-f5622971.css",
+    "src": "Boat.css"
+  },
+  "src/routes/Weather.css": {
+    "file": "_app/immutable/assets/Weather-958286ad.css",
+    "src": "src/routes/Weather.css"
+  },
+  "src/routes/Time.css": {
+    "file": "_app/immutable/assets/Time-e3ddeed2.css",
+    "src": "src/routes/Time.css"
   },
   "src/routes/rain.css": {
     "file": "_app/immutable/assets/rain-d0b14a3d.css",
