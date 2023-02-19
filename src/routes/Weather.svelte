@@ -141,8 +141,6 @@
 <svelte:window on:keydown={handleKeydown} />
 
 {#if working}
-	<Text {...pkg} />
-
 	<div class="container">
 		<div class="waves">
 			<JsWaves wind={pkg.wind} />
@@ -164,11 +162,15 @@
 
 		<img src="compass.svg" alt="Compass" class="compass" />
 	</div>
+
+	<Text {...pkg} />
 {:else}
 	<h1>
 		Welcome, this idea requires location data. Nothing will be stored or
-		recorded.
+		recorded.<br />There are known scaling issues, recommended browser
+		Safari or Firefox
 	</h1>
+
 	<Button on:click={clickHandler} tag="Enter" />
 
 	{#if devOptions}
@@ -228,23 +230,26 @@
 	.time {
 		grid-area: 1/2;
 		z-index: 3;
+		grid-column: 1/2;
 	}
 	.waves {
 		grid-area: 1/2;
 		z-index: 2;
+		grid-column: 1/2;
 	}
 
 	.clouds {
 		grid-area: 1/2;
 		z-index: 4;
+		grid-column: 1/2;
 	}
 
 	.rain {
 		grid-area: 1/2;
 		z-index: 4;
+		grid-column: 1/2;
 	}
 	.compass {
-		grid-area: 1/2;
 		z-index: 5;
 		max-width: 15%;
 		position: absolute;
@@ -260,10 +265,12 @@
 		grid-area: 1/2;
 		text-align: center;
 		z-index: 1;
+		grid-column: 1/2;
 	}
 
 	.container {
 		display: grid;
 		text-align: center;
+		grid-template-columns: 100vw;
 	}
 </style>

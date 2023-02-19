@@ -68,6 +68,8 @@
 		margin-top: 27vh;
 		display: grid;
 		text-align: center;
+		grid-column: 1/2;
+		grid-area: 1/2;
 	}
 	svg {
 		stroke: none;

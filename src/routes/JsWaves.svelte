@@ -53,6 +53,7 @@
 		width: 50%;
 		text-align: center;
 		grid-area: 1/2;
+		grid-column: 1/2;
 	}
 
 	svg {
